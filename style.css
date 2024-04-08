@@ -3,7 +3,7 @@
   width: 100%;
   height: 80px;
   position: fixed;
-  padding: 0 100px;
+  padding: 0 10vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,7 +27,7 @@
   width: 100%;
   height: 100vh;
   background-color: #232323;
-  padding: 0 100px;
+  padding: 0 10vw;
   display: flex;
   justify-content: center;
 }
@@ -71,7 +71,7 @@
 #aboutme {
   width: 100%;
   height: 100vh;
-  padding: 0 100px;
+  padding: 0 10vw;
   background-color: #1f1f1f;
   display: flex;
   flex-direction: column;
@@ -119,7 +119,7 @@
 #skill {
   width: 100%;
   height: 100vh;
-  padding: 0 100px;
+  padding: 0 10vw;
   background-color: #222222;
   display: flex;
   flex-direction: column;
@@ -160,7 +160,7 @@
 #portofolio {
   width: 100%;
   height: 100vh;
-  padding: 0 100px;
+  padding: 0 10vw;
   background-color: #1f1f1f;
   display: flex;
   justify-content: space-evenly;
@@ -181,6 +181,11 @@
   background-color: #333333;
   padding: 10px;
   margin: 0 5vw;
+  transition: 0.3s;
+}
+.port-menu:hover {
+  transform: scale(1.2);
+  transition: 0.3s;
 }
 .port-menu img {
   width: 100%;
@@ -190,7 +195,7 @@
 #contact {
   width: 100%;
   height: 60vh;
-  padding: 0 100px;
+  padding: 0 10vw;
   background-color: #ec6c4e;
   display: flex;
   flex-direction: column;
@@ -232,4 +237,70 @@
 .info-kanan a {
   text-decoration: none;
   color: white;
+}
+
+/* responsive */
+
+@media screen and (max-width: 600) {
+  /* NAVIGASI */
+  .navigasi ul {
+    display: none;
+  }
+
+  /* HOME */
+  .home img {
+    display: none;
+  }
+  #home h2 {
+    font-size: 50px;
+  }
+
+  #home h1 {
+    font-size: 60px;
+  }
+
+  /* ABOUT ME */
+  .aboutme-content {
+    flex-direction: column;
+  }
+
+  .aboutme img {
+    width: 200px;
+    height: 280px;
+  }
+  .kiri,
+  .kanan {
+    align-items: center;
+    width: 100%;
+  }
+  .hilang {
+    display: none;
+  }
+
+  /* PORTOFOLIO */
+  .port-menu {
+    width: 150px;
+    height: 150px;
+  }
+  #portofolio {
+    padding: 0;
+  }
+
+  /* CONTACT */
+  .info {
+    justify-content: center;
+    width: 100%;
+  }
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+  }
+  .info-kiri {
+    display: flex;
+    width: 30%;
+    justify-content: end;
+  }
+  .info-kanan {
+    width: 50%;
+  }
 }
