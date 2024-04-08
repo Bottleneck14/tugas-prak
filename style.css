@@ -241,7 +241,7 @@
 
 /* responsive */
 
-@media screen and (max-width: 600) {
+@media only screen and (max-width: 600px) {
   /* NAVIGASI */
   .navigasi ul {
     display: none;
